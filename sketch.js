@@ -14,8 +14,9 @@ let config = {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  mic = new p5.AudioIn();
-  mic.start();
+  userStartAudio();       
+  mic = new p5.AudioIn(); 
+  mic.start();            
 
   gui = new dat.GUI();
   gui.add(config, 'textContent').name('TEXT').onChange(updateTextContent);
